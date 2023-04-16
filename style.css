@@ -1,0 +1,1670 @@
+/*Colour palette-------------------------------------*/
+
+/*
+    blackboard #565656;
+    grain #D7CEC7;
+    oxblood #76323F;
+    tan #C09F80;
+    cornflower blue #7F95D1;
+    tickle me pink #FF82A9;
+    spanish pink #FFC0BE;
+    misty rose #FFEBE7;
+*/
+
+
+/*Common CSS-------------------------------------*/
+
+body {
+    padding: 0 1em;
+    font-family: 'El Messiri', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.my-container > * {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Titan One';
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFEBE7;
+}
+h2 {
+    font-family: 'Titan One';
+    font-size: 4.5rem;
+    margin-top: 0;
+    text-align: center;
+    color: #f4dfd0;
+    text-shadow: #4b0f1a 1px 1px 0, #4b0f1a 2px 2px 0, 
+                 #4b0f1a 3px 3px 0, #4b0f1a 4px 4px 0, 
+                 #4b0f1a 5px 5px 0;
+}
+
+p, li, figcaption {
+    font-family: 'ElMessiriMedium', sans-serif;
+    font-size: 20px;
+    
+}
+h2, h3, h4 {
+    font-family: 'ElMessiriBold', sans-serif;
+}
+.schemes h2, .gallery h2 {
+    color: #4b0f1a;
+    text-shadow: #D7CEC7 1px 1px 0, #D7CEC7 2px 2px 0, 
+                 #D7CEC7 3px 3px 0, #D7CEC7 4px 4px 0, 
+                 #D7CEC7 5px 5px 0;
+}
+.events h3, .workshops h3 {
+    padding-left: 0.7rem;
+}
+
+
+.logo-image {
+    grid-column: 4 / 5;
+}
+.top-navbar {
+    background-color: #D7CEC7;
+    opacity: 0.7;
+    max-width: 980px;
+}
+.top-navbar a {
+    text-decoration: none;
+    padding: 0 0.5em;
+    border-right: 1px solid rgb(54, 42, 129);
+    line-height: 1.5em;
+    font-size: 1.5em;
+    transition: font-size 0.3s ease;
+    color: #363636;
+}
+.top-navbar a:last-child {
+    border-right: none;
+}
+.top-navbar a:hover, .top-navbar a.active {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #76323F;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    
+}
+#arrow {
+    background-color: #fff5f3b6;
+    border-radius: 20px;
+}
+.media-icons {
+    list-style-type: none;
+}
+/* CSS to animate Search bar */
+/* Technique is taken from https://codepen.io/jkantner/pen/eYmvvqQ */
+input {
+    color: #171717;
+}
+.search-bar-form {
+    display: flex;
+}
+.search-bar-form input,
+.search-button,
+.search-button:before,
+.search-button:after {
+    transition: all 0.25s ease-out;
+}
+.search-bar-form input,
+.search-button {
+	width: 3em;
+	height: 3em;
+    border: none;
+}
+.search-bar-form input:invalid:not(:focus),
+.search-button {
+    cursor: pointer;
+}
+.search-bar-form,
+.search-bar-form input:focus,
+.search-bar-form input:valid  {
+	width: 90%;
+}
+.search-bar-form input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em #FFEBE7 inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-bar-form input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar-form input:focus,
+.search-bar-form input:valid {
+	background: #fff;
+    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	border-radius: 0.375em 0 0 0.375em;
+	
+	transform: scale(1);
+}
+.search-icon {
+    width: 1.8em;
+}
+.search-button {
+    background-color: #FFEBE7;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-button:before, 
+.search-button:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-button:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.search-button:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+.search-button span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+/* Active state */
+.search-bar-form input:focus + .search-button,
+.search-bar-form input:valid + .search-button {
+	background: #2762f3;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+.search-bar-form input:focus + .search-button:before, 
+.search-bar-form input:focus + .search-button:after,
+.search-bar-form input:valid + .search-button:before, 
+.search-bar-form input:valid + .search-button:after {
+	opacity: 1;
+}
+.search-bar-form input:focus + .search-button:hover,
+.search-bar-form input:valid + .search-button:hover,
+.search-bar-form input:valid:not(:focus) + .search-button:focus {
+	background: #0c48db;
+}
+.search-bar-form input:focus + .search-button:active,
+.search-bar-form input:valid + .search-button:active {
+	transform: translateY(1px);
+}
+
+.account-icon {
+    width: 52px;
+    height: 52px;
+    background-color: #fff5f3b6;
+    border-radius: 25px;
+    background-image: url("assets/Account\ icon.png");
+}
+
+.heading-box {
+    background-color: rgba(26, 25, 25, 0.5);
+
+}
+
+a {
+    cursor: pointer;
+}
+
+.first-footer {
+    background-color: #e3edff;
+}
+.first-footer nav {
+    background-color: #afcfff;
+    border-style: dashed;
+    border-radius: 5px;
+    border-color: #888888;
+    padding: 0.5rem 1rem;
+}
+hr {
+    margin: 0.3rem;
+    border: 0; 
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+/*Footer-------------------------------------------------*/
+.footer-second-column {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+}
+.footer-second-column li {
+    padding: 0.2rem 0;
+    margin: 3px 0;
+}
+
+.footer-second-column li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+  
+/* Code is taken and adopted from https://sharkcoder.com/visual/underline */
+.footer-second-column li a::after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+  
+.footer-second-column li a:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+.second-footer p {
+    margin: 0;
+    text-align: center;
+}
+.second-footer {
+    background-color: #f6f6f6;
+}
+
+/*Buttons------------------------------------------------*/
+.blue-button {
+    background-color: #86a1ed;
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+    border-radius: 8px;
+    color:aliceblue;
+    text-decoration: none;
+}
+.dark-blue-button {
+    /* background-color: rgb(62, 78, 137); */
+    background-color: #13335D;
+    padding: 0.7rem 1.5rem;
+    margin: 2rem;
+    border-radius: 8px;
+    color:aliceblue;
+    text-decoration: none;
+}
+.dark-blue-button:hover {
+    background-color: #17447d;
+    color: aliceblue;
+}
+.red-button {
+    background-color: #76323F;
+    padding: 0.7rem 1.5rem;
+    margin: 2rem;
+    border-radius: 8px;
+    color:aliceblue;
+    border-color: #632732;
+}
+.comment-button {
+    border: none;
+    background-color: #ffffff;
+}
+.filter-btn.active-button {
+    background-image: linear-gradient(rgb(74, 123, 236), rgb(32, 76, 179));
+    color: whitesmoke;
+}
+.send-button {
+    background-image: linear-gradient(rgb(253, 232, 125), rgb(226, 190, 47));
+    border-color: #fff8e7;
+    border-radius: 3px;
+}
+.red-filter-btn {
+    background-image: linear-gradient(#a22c41, #6a2935);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    width: auto;
+}
+.font-change-button {
+    width: 30px;
+    background-color: #f4dfd0;
+}
+.font-change-button:hover, .font-change-button:focus {
+    background-color: #f5ccaf;
+    scale: 0.9;
+}
+
+/* Modal window for login form---------------------------------- */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .login-form-submit {
+    background-color: #027d15;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .login-form-submit:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #971f35;
+    color: #FFEBE7;
+    border-radius: 5px;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  .modal-container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* background with opacity */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fff5f3;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; 
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #76323F;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+
+
+
+/*CSS for the mobile version-------------------------------------*/
+@media only screen and (max-width: 570px) {
+    p, li, figcaption {
+        font-size: 1rem;
+    }
+    h4 {
+        padding-left: 1rem;
+    }
+    body{
+        background: rgb(255, 255, 255);
+        height: 100vh;   
+        padding:8px;
+    }
+    .my-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+            "second-footer";
+        justify-items: stretch;
+    }
+    header {
+        grid-area: header;
+
+    }
+    main {
+        grid-area: main;
+    }
+    .first-footer {
+        grid-area: footer;
+        width: 100%;
+    }
+    .second-footer {
+        grid-area: second-footer;
+        width: 100%;
+    }
+    .account-icon {
+        scale: 0.7;
+    }
+    #arrow {
+        scale: 0.7;
+        justify-self: center;
+        margin: 0;
+    }
+    #logo-link, .logo-image {
+        width: 84px;
+        height: 84px;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .header-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 0.3fr) repeat(3, 1fr) 35px;
+        align-items: flex-start;
+    }
+    .heading-box {
+        grid-row: 2 / 3;
+        grid-column: 1 / 7;
+    }
+    #arrow {
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+        justify-self: center;
+    }
+    .red-filter-btn {
+        margin: .2rem;
+    }
+    /* Menu for mobile version----------------------- */
+    .top-navbar {
+        display: none;
+    }
+    #mobileLinks {
+        grid-column: 5 / 6;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: right;
+        display: none;
+    }
+    #mobileLinks a {
+        text-decoration: none;
+        background-color: #d7cec79c;
+        color: #4b0f1a;
+        padding: 0 0.2rem 0 1rem;
+    }
+    .my-menu-icon {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    a.my-menu-icon {
+        background: #363636d7;
+        background-image: url("assets/Menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-self: right;
+        grid-column: 6 / 7;
+    }
+    .bottom-navbar-list {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        justify-items: center;
+    }
+    .first-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .social-media {
+        padding-left: 1rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        /* justify-items: center; */
+    }
+    .media-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-third-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        justify-items: center;
+    }
+    .footer-third-column :nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .footer-third-column :nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+
+    /*CSS for the layout of index.html page------------------------*/
+    h1 {
+        font-size: 3em;
+    }
+    .workshops {
+        background-color:bisque;
+    }
+    .events, .workshops {
+        padding-bottom: 1rem;
+    }
+    .schemes, .gallery {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+    }
+    .home-img-vertical-figure {
+        width: 80vw;
+        height: 70vh;
+        margin: 0;
+        padding: 0;
+    }
+    .home-img-horizontal-figure {
+        width: 90vw;
+        height: 45vh;
+        margin: 0;
+        padding: 0;
+    }
+    .home-img-horizontal {
+        width: 90vw;
+        height: 37vh;
+    }
+    
+    .home-img-vertical {
+        width: 80vw;
+        height: 65vh;
+    }
+    /*CSS for the layout of schemes.html page------------------------*/
+    .schemes-hero-image {
+        background-size: cover;
+        background-position: right;
+        max-height: 500px;
+    }
+    .patterns-knitting {
+        padding: 1rem;
+    }
+    .patterns-knitting figure {
+        margin-bottom: 2rem;
+    }
+    /* CSS for the layout of fair.html page------------------------- */
+    .fair-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "events"
+            "form";
+    }
+    .fairs-events {
+        justify-self: center;
+        align-self: center;
+        grid-area: events;
+        grid-template-areas: 
+            "first-event"
+            "first-pic"
+            "second-event"
+            "second-pic"
+            "third-event"
+            "third-pic";
+    }
+    .left-event-description, .right-event-description {
+        margin-left: 1rem;
+    }
+    .fairs-events img {
+        width: 90vw;
+        height: 60vw;
+    }
+    #first-event {
+        grid-area: first-event;
+    }
+    #first-pic {
+        grid-area: first-pic;
+    }
+    #second-event {
+        grid-area: second-event;
+    }
+    #second-pic {
+        grid-area: second-pic;
+    }
+    #third-event {
+        grid-area: third-event;
+    }
+    #third-pic {
+        grid-area: third-pic;
+    }
+    .contact-form {
+        grid-area: form;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        justify-items: center;
+    }
+    .fairs-events {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .contact-form h3 {
+        grid-row: 1 / 2;
+    }
+    .contact-form form {
+        grid-row: 2 / 5;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    .button-submit {
+        grid-column: 1 / 3;
+    }
+    .left-event-description > *, .right-event-description > * {
+        margin: 1rem 0.2rem 0.5rem 0.2rem;
+    }
+    .left-event-description, .right-event-description {
+        margin-left: 1rem;
+    }
+
+
+    
+    /*CSS for the layout of gallery.html page------------------------*/
+    .gallery-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .gallery-list-figure, .gallery-list-figure img {
+        max-width: 80vw;
+    }
+    #myButtonContainer .filter-btn {
+        display: inline;
+        padding: 0.2rem 0;
+        margin: 0.1rem 0.1rem;
+        min-width: 65px;
+    }
+    /* CSS for the layout of workshops.html page-------------------- */
+    .workshop-figures {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .workshops-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "aside"
+            "collaps"
+            "article"
+            "flipcard"
+            "lessons";
+    }
+
+    .workshops-aside {
+        grid-area: aside;
+        display: inline;
+    }
+    .collapsible {
+        grid-area: collaps;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .workshop-knitting-article {
+        grid-area: article;
+        display: grid;
+    }
+    .workshop-knitting-article > * {
+        margin: auto;
+        padding: 1rem 2rem 1rem 1rem;
+
+    }
+    .workshop-knitting-flipcards {
+        grid-area: flipcard;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .workshop-knitting-lessons {
+        grid-area: lessons;
+        display: grid;
+        justify-items: center;
+    }
+    .work-img-horizontal {
+        width: 80vw;
+        height: 60vw;
+    }
+    .workshops-aside ul li {
+        display: inline;
+    }
+    .flip-card-inner {
+        display: grid;
+        grid-template-columns: 95vw;
+        justify-items: center;
+    }
+    .flip-card-back {
+        padding: 0 0.5rem;
+    }
+    .flip-card {
+        margin: 1rem 0.5rem;
+    }
+    .flip-card-inner figcaption {
+        color: #565656;
+        scale: 0.9;
+    }
+    iframe {
+        width: 95vw;
+        height: auto;
+    }
+
+}
+
+
+/*CSS for the tablet version-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 800px) {
+    /* Font size------------------------------------------------ */
+    p, li, figcaption {
+        font-size: medium;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    /*layout of header-------------------------------------------*/
+    .my-container {
+        display: grid;
+    }
+    .header-grid {
+        display: grid;
+        grid-template-columns: 50px 105px repeat(3, 1fr) 50px;
+        grid-template-rows: repeat(3, min-height);
+        grid-template-areas: 
+            "account search logo nav nav"
+            "header header header header header"
+            ". . . arrow .";
+        align-items: flex-start;
+    }
+    .account-icon {
+        grid-area: account;
+    }
+    .search-bar-form {
+        grid-area: search;
+        display: grid;
+        grid-template-columns: 1fr 0.2fr;
+    }
+    .search-bar-form input {
+        grid-column: 1 / 2;
+    }
+    .search-bar-form button {
+        grid-column: 2 / 3;
+    }
+    .logo-image {
+        grid-area: logo;
+    }
+    .heading-box {
+        grid-area: header;
+        grid-column: 1 / 7;
+    }
+    #arrow {
+        grid-area: arrow;
+        justify-self: center;
+    }
+    .top-navbar {
+        display: none;
+    }
+    .bottom-navbar-list {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        justify-items: center;
+    }
+    #mobileLinks {
+        grid-column: 5 / 6;
+        grid-row: 1 / 2;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: right;
+        display: none;
+    }
+    #mobileLinks a {
+        text-decoration: none;
+        background-color: #d7cec79c;
+        color: #4b0f1a;
+        padding: 0 0.2rem 0 1rem;
+    }
+    .my-menu-icon {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    a.my-menu-icon {
+        background: #363636d7;
+        background-image: url("assets/Menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-self: right;
+        grid-column: 6 / 7;
+    }
+    .media-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /*index.html home page---------------------------------------*/
+    .home-main {
+        display: grid;
+        grid-template-columns: minmax(138px, 0.6fr) repeat(3, 1fr);
+        grid-template-areas: 
+            "events schemes schemes schemes"
+            "workshops gallery gallery gallery";
+    }
+    .events {
+        grid-area: events;
+    }
+    .schemes {
+        grid-area: schemes;
+    }
+    .home-img-vertical-figure {
+        width: 25vw;
+        height: 45vw;
+        justify-items: center;
+    }
+    .workshops {
+        grid-area: workshops;
+        background-color:bisque;
+    }
+    .gallery {
+        grid-area: gallery;
+    }
+    .schemes, .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .schemes h2, .gallery h2 {
+        grid-column: 1 / 3;
+    }
+    .schemes a, .gallery a {
+        grid-column: 1 / 3;
+    }
+    .home-img-horizontal {
+        width: 35vw;
+        height: 25vw;
+    }
+    
+    .home-img-vertical {
+        width: 25vw;
+        height: 35vw;
+    }
+    /*patterns.html page------------------------------------------*/
+    .patterns-main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .patterns-knitting {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding-top: 1rem;
+    }
+    .schemes-hero-image {
+        background-size: cover;
+        background-position: right;
+    }
+    /* CSS for the layout of fair.html page------------------------- */
+    .fairs-events {
+        justify-self: center;
+        align-self: center;
+    }
+    .fairs-events img {
+        width: 75vw;
+        height: 50vw;
+    }
+    .fair-main {
+        display: grid;
+        grid-template-areas: 
+            "events"
+            "form";
+    }
+    .fairs-events {
+        grid-area: events;
+        grid-template-areas: 
+            "first-event"
+            "first-pic"
+            "second-event"
+            "second-pic"
+            "third-event"
+            "third-pic";
+    }
+    #first-event {
+        grid-area: first-event;
+    }
+    #first-pic {
+        grid-area: first-pic;
+    }
+    #second-event {
+        grid-area: second-event;
+    }
+    #second-pic {
+        grid-area: second-pic;
+    }
+    #third-event {
+        grid-area: third-event;
+    }
+    #third-pic {
+        grid-area: third-pic;
+    }
+    .contact-form {
+        grid-area: form;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        justify-items: center;
+    }
+    .fairs-events {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding-top: 2rem;
+    }
+    .contact-form h3 {
+        grid-row: 1 / 2;
+    }
+    .contact-form form {
+        grid-row: 2 / 5;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    .button-submit {
+        grid-column: 1 / 3;
+    }
+    .left-event-description > *, .right-event-description > * {
+        margin: 1rem 4rem 1.5rem 4rem;
+    }
+    .left-event-description, .right-event-description {
+        margin-left: 1rem;
+    }
+
+    /*CSS for the layout of gallery.html page------------------------*/
+    .gallery-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery-list-figure, .gallery-list-figure img {
+        max-width: 28vw;
+    }
+    /* CSS for the layout of workshops.html page----------------- */
+    .workshop-figures {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .workshops-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "aside"
+            "collaps"
+            "article"
+            "flipcard"
+            "lessons";
+    }
+    .workshops-aside {
+        grid-area: aside;
+    }
+    .collapsible {
+        grid-area: collaps;
+    }
+    .workshop-knitting-article {
+        grid-area: article;
+    }
+    .workshop-knitting-flipcards {
+        grid-area: flipcard;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .workshop-knitting-lessons {
+        grid-area: lessons;
+        display: grid;
+        justify-items: center;
+    }
+    .work-img-horizontal {
+        width: 50vw;
+        height: 32vw;
+    }
+    .workshops-aside ul li {
+        display: inline;
+    }
+    .flip-card-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flip-card-back {
+        padding: 0 0.5rem;
+    }
+    .flip-card {
+        margin: 1rem 0.5rem;
+    }
+    .flip-card-inner figcaption {
+        color: #565656;
+        scale: 0.9;
+    }
+
+}
+
+/*CSS for the desktop version-------------------------------------*/
+@media only screen and (min-width: 801px) {
+    /*CSS for the layout of index.html page-----------------------*/
+    .my-container {
+        display: grid;
+    }
+    .header-grid {
+        display: grid;
+        grid-template-columns: repeat(6, min-width);
+        grid-template-rows: repeat(2, min-height);
+        grid-template-areas: 
+            "account search buttons logo nav nav"
+            "header header header header header header"
+            ". . . arrow . .";
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .font-btn-set {
+        grid-area: buttons;
+    }
+    .top-navbar {
+        grid-area: nav;
+    }
+    .account-icon {
+        grid-area: account;
+    }
+    .logo-image {
+        grid-area: logo;
+    }
+    .heading-box {
+        grid-area: header;
+    }
+    #arrow {
+        grid-area: arrow;
+        justify-self: center;
+    }
+    .home-main {
+        display: grid;
+        grid-template-columns: 0.6fr repeat(2, 1.2fr) 0.6fr;
+        grid-template-areas: 
+            "events schemes schemes workshops"
+            "events gallery gallery workshops";
+    }
+    .events {
+        grid-area: events;
+    }
+    .schemes {
+        grid-area: schemes;
+    }
+    .workshops {
+        grid-area: workshops;
+    }
+    .gallery {
+        grid-area: gallery;
+    }
+    .schemes, .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .schemes h2, .gallery h2 {
+        grid-column: 1 / 3;
+    }
+    .schemes a, .gallery a {
+        grid-column: 1 / 3;
+    }
+
+    /*CSS for the layout of patterns.html page-----------------------*/
+    .patterns-main {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+    .patterns-filter-nav {
+        grid-column: 1 / 2;
+    }
+    .patterns-knitting {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding-top: 2rem;
+    }
+    .patterns-filter-nav ul li {
+        display: block;
+    }
+    /*CSS for the layout of fair.html page---------------------------*/
+    .fair-main {
+        display: grid;
+        grid-template-areas: 
+            "events"
+            "form";
+    }
+    .events {
+        grid-area: events;
+    }
+    .contact-form {
+        grid-area: form;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        justify-items: center;
+    }
+    .fairs-events {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding-top: 2rem;
+    }
+    .contact-form h3 {
+        grid-row: 1 / 2;
+    }
+    .contact-form form {
+        grid-row: 2 / 3;
+    }
+    .left-event-description > * {
+        margin: 3rem 2rem 1.5rem 5rem;
+    }
+    .right-event-description > * {
+        margin: 3rem 5rem 1.5rem 2rem;
+    }
+    /*CSS for the layout of gallery.html page------------------------*/
+    .gallery-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .gallery-list-figure, .gallery-list-figure img {
+        max-width: 22vw;
+        
+    }
+    .gallery-list-figure img {
+        max-height: 350px;
+    }
+    /*CSS for the layout of workshops.html page------------------------*/
+
+    .workshops-main {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+            "aside collaps"
+            "aside article"
+            "aside flipcard"
+            "aside lessons";
+    }
+    .workshops-aside {
+        grid-area: aside;
+    }
+    .collapsible {
+        grid-area: collaps;
+    }
+    .workshop-knitting-article {
+        grid-area: article;
+    }
+    .workshop-knitting-flipcards {
+        grid-area: flipcard;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .workshop-knitting-lessons {
+        grid-area: lessons;
+        display: grid;
+        justify-items: center;
+    }
+    .workshop-figures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .workshops-figures-second {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .workshop-knitting-article h3, .workshop-knitting-article h4 {
+        text-align: center;
+    }
+    .workshop-knitting-flipcards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+    }
+    /* Flip card code is adopted from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    .flip-card {
+        background-color: transparent;
+        width: 30vw;
+        height: 22vw;
+        perspective: 1000px;
+    }
+      
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+      
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+      
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+      
+    .flip-card-front {
+        background-color: #c09f80ad;
+        color: black;
+    }
+      
+    .flip-card-back {
+        background-color: #17447d;
+        color: white;
+        transform: rotateY(180deg);
+        padding: 1rem 0.5rem;
+    }
+    
+
+
+
+    /*CSS for other content----------------------------*/
+    .work-img-horizontal {
+        width: 30vw;
+        height: 20vw;  
+    }
+    .home-img-horizontal {
+        width: 25vw;
+        height: 17vw;
+    }
+    .home-img-vertical {
+        width: 20vw;
+        height: 30vw;
+    }
+    #mobileLinks {
+        display: none;
+    }
+
+    .first-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        grid-template-areas: 
+            "nav nav nav"
+            "media second third";
+    }
+    .first-footer nav {
+        grid-area: nav;        
+        
+        width: 98%;
+    }
+    .bottom-navbar-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+    .bottom-navbar-list li {
+        
+        color: #d7e7ff;
+        box-shadow: 1px 2px 15px 5px;
+    }
+    .bottom-navbar-list li a {
+        border-radius: 5px;
+        background-color: #6997dd;
+        padding: 0.4rem 3rem;
+        text-decoration: none;
+        color: #f0f0f0;
+    }
+
+
+    .social-media {
+        grid-area: media;
+    }
+    .footer-second-column {
+        grid-area: second;
+    }
+    .footer-third-column {
+        grid-area: third;
+    }
+    .workshops {
+        background-color: #f4dfd0;
+    }
+
+
+    .schemes-hero-image {
+        background-size: cover;
+    }
+}
+
+
+
+/*index.html CSS-------------------------------------*/
+
+
+.home-hero-image {
+    background-image: url("assets/yarn-home-hero.jpeg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #CCCCCC;
+}
+
+.events-list, .workshops-list {
+    padding-left: 0.8rem;
+    list-style-type: none;
+}
+
+.events-list li, .workshops-list li {
+    padding-left: 1.5rem;
+    background-image: url("assets/bullet.svg");
+    background-position: 0 center;
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+}
+.events {
+    background-color: #f4dfd0;
+}
+
+.schemes {
+    background-color: #fff5f3;
+}
+.gallery {
+    background-color: #FFEBE7;
+}
+.schemes figcaption {
+    text-align: center;
+}
+
+.home-img-vertical, .home-img-horizontal {
+    box-shadow:
+      1px 2px 8px rgba(121, 121, 121, 0.5);
+}
+
+
+
+
+/*patterns.html CSS-------------------------------------*/
+.schemes-hero-image {
+    background-image: url("assets/hooks.jpg");
+    background-size: cover;
+    background-color: #CCCCCC;
+    background-repeat: no-repeat;
+}
+
+.patterns-filter-nav {
+    background-color: #fbdfcf;
+}
+.patterns-knitting {
+    background-color: #e4fbfe;
+}
+.filter-btn {
+    background-image: linear-gradient(rgb(32, 76, 179), rgb(19, 51, 93));
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem;
+    min-width: 100px;
+}
+
+/*fair.html CSS-------------------------------------*/
+.dark-search-button {
+    background-color: #363636;
+}
+.dark-search-bar-form input {
+    box-shadow: 0 0 0 0.4em #171717 inset;
+}
+.fair-hero-image {
+    background-image: url("assets/dolls-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #CCCCCC;
+}
+.fairs-events {
+    background-color: #fff8e7;
+}
+.fair-img {
+    width: 45vw;
+    height: 30vw;
+    border: 16px solid;
+    border-image: linear-gradient(135deg, #857667 38%, #FDD6B9 65%);
+    border-image-slice: 1;
+}
+.contact-form {
+    background-color: #FFEBE7;
+    padding-bottom: 0.5rem;
+}
+.contact-input{
+    border-radius: 5px;
+    border: solid #ffe9f4;
+    padding-left: 0.2rem;
+}
+.contact-input:focus {
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    outline-width: 0px;
+}
+.contact-input:hover {
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+}
+.button-submit {
+    background-color: #ff0081;
+    color: #f6f6f6;
+    border-radius: 4px;
+    border: none;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    padding: 0.2rem 1.5rem;
+}
+.button-submit:focus {
+    outline: 0;
+}
+.button-submit:before, .button-submit:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.button-submit:active{
+    transform: scale(0.9);
+    background-color: darken(#ff0081, 5%);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+
+
+/*gallery.html CSS-------------------------------------*/
+.gallery-hero-image {
+    background-image: url("assets/yarn-hero.jpeg");
+    background-size: cover;
+    background-color: #CCCCCC;
+}
+
+
+.heart-white{
+    background-color: white;
+    width: 2em;
+    font-size: 1rem;
+}
+.heart-pink{
+    background-image: url("assets/magenta\ heart.png");
+    background-size: 2em;
+    font-size: 1rem;
+}
+.gallery-list {
+    list-style-type: none;   
+}
+.gallery-list-figure {
+    display: none;
+}
+figcaption{
+    color: #454545;
+}
+.mySlides img {
+    width: 65vw;
+    height: 40vw;
+}
+
+.gallery-carousel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.carousel{
+    display: grid;
+    justify-content: center;
+    background-color: #544141;
+    margin-bottom: 1rem;
+}
+.show {
+    display: block;
+}
+#myButtonContainer li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+/*workshops.html CSS-------------------------------------*/
+.workshops-hero-image {
+    background-image: url("assets/knitting\ hands\ hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #CCCCCC;
+}
+#essentials-pic {
+    max-width: 70vw;
+
+}
+.workshops-aside ul li {
+    list-style-type: none;
+}
+.collapsible {
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    background-image: linear-gradient(#86a1ed, #1a3fa5);
+    color: aliceblue;
+}
+.collapsible:hover {
+    background-color: #555;
+}
+.collapsible-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    background-color: #fff5f3;
+}
+iframe {
+    width: 533px;
+    height: 320px;
+}
+.plus-sign {
+    float: right;
+}
+.plus-sign svg{
+    width: 2rem;
+    height: 2rem;
+    fill: aliceblue;
+}
+.workshop-knitting-article h3{
+    padding: 1.5rem;
+}
+.workshops-aside {
+    background-color: #fcdbd7;
+}

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- There is all the invisible to user information in head section.  -->
+    <head>
+        <title>Jolly Sheep - Gallery</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This is a website for a community of people interested in DIY for seeking tutorials, patterns, ideas, discussion and sharing.">
+        <meta name="author" content="DIY Community">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="refresh" content="600">
+        <meta name="keywords" content="Knitting Crochet Sewing DIY 'Toy Making' 'DIY Club' Gallery 'Handicraft exibition'">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Custom style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Titan One" rel="stylesheet">
+        <link href="https://fontlibrary.org//face/el-messiri" rel="stylesheet">
+        <!-- Accessibility.js library for the font size -->
+        <link rel="stylesheet" href="plugin/acessibilidade.css">
+        
+    </head>
+
+    <!-- The structure for all visible content of the website is in body section. -->
+    <body class="my-container">
+        
+        <!-- Header section includes search bar, account, navbar, hero image, logo and name of site. -->
+        <header>
+            <div class="gallery-hero-image">
+                <div class="header-grid">
+                    <!-- Account icon -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="account-icon">
+                    </button>
+                    <!-- Modal for login form -->
+                    <div id="id01" class="modal">
+    
+                        <form class="modal-content animate" action="" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                                <button type="submit" class="login-form-submit">Login</button>
+                                <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Sets of buttons to change the font size o the page -->
+                    <div class="font-btn-set">
+                        <button id="increase-plugin-ac" class="font-change-button">A+</button>
+                        <button id="normal-plugin-ac" class="font-change-button">A</button>
+                        <button id="decrease-plugin-ac" class="font-change-button">A-</button>
+                    </div>
+                    <!-- Search bar -->
+                    <form action="" class="search-bar-form">
+                        <input type="search" placeholder="Search.." name="search" pattern=".*\S.*" required>
+                        <button type="submit" class="search-button">
+                            <span>Search</span>
+                        </button>
+                    </form>
+                    <!-- Logo -->
+                    <a href="index.html" id="logo-link">
+                        <img src="assets/Logo Sheep.png" alt="Logo sheep" class="logo-image">
+                    </a>
+                    <!-- Navigation bar in the top right corner -->
+                    <nav class="top-navbar">
+                        <ul class="top-navbar-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="patterns.html">Patterns</a>
+                            </li>
+                            <li>
+                                <a href="fair.html">Fair</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html" class="active">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="workshops.html">Workshops</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Navigation for mobile and tablet screen size -->
+                    <nav id="mobileLinks">
+                        <a href="patterns.html">Patterns</a>
+                        <a href="fair.html">Fair</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="workshops.html">Workshop</a>
+                    </nav>
+                    <a href="javascript:void(0);" class="my-menu-icon" onclick="openMenu()"></a>
+                    <!-- Container for the title of the page -->  
+                    <div class="heading-box">
+                        <h2 class="gallery-header">Gallery</h2>
+                    </div>
+                    <figure id="arrow">
+                        <img src="/assets/Ellipse 2.png" alt="Scroll down icon">
+                    </figure>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="my-inner-carousel carousel-inner">
+                    <div class="mySlides gallery-carousel carousel-item active">
+                        <img src="assets/gallery pictures/knitting/knitting-gallery.jpg" alt="Knitting" class="d-block">
+                    </div>
+                    <div class="mySlides gallery-carousel carousel-item">
+                        <img src="assets/gallery pictures/crochet/hook-gallery.jpg" alt="Crochet" class="d-block">
+                    </div>
+                    <div class="mySlides gallery-carousel carousel-item">
+                        <img src="assets/gallery pictures/toys/toys-gallery.jpg" alt="Toys" class="d-block">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Buttons used as Filters for the images -->
+            <ul id="myButtonContainer">
+                <li>
+                    <button class="filter-btn active-button" onclick="filterSelection('all')"> Show all</button>
+                </li>
+                <li>
+                    <button class="filter-btn" onclick="filterSelection('knit')"> Knitting</button>
+                </li>
+                <li>
+                    <button class="filter-btn" onclick="filterSelection('crochet')"> Crochet</button>
+                </li>
+                <li>
+                    <button class="filter-btn" onclick="filterSelection('toys')"> Toys</button>
+                </li>
+            </ul>
+
+            <!-- List of images showing below the gallery belonging to Knitting -->
+            <ul class="gallery-list">
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/baby.jpg" alt="Baby long sleeve" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Knitted long sleeve for a newborn by Anna Mann.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV" aria-expanded="false" aria-controls="myDIV" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/bags.jpg" alt="Rucksack" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Colourful rucksacks for children by Cristina Tong.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV1" aria-expanded="false" aria-controls="myDIV1" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV1">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/boy-vest.jpg" alt="Boy's vest" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Boy's vest in blue by Dan Gray.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV2" aria-expanded="false" aria-controls="myDIV2" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV2">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/doll.jpg" alt="Knitted doll" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Soft lady-doll by Manisha Smith.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV3" aria-expanded="false" aria-controls="myDIV3" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV3">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/girl-scarf.jpg" alt="Scarf for a girl" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Ethereal scarf for a young lady by Mary Johns.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV4" aria-expanded="false" aria-controls="myDIV4" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV4">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/hat-dog.jpg" alt="Knitted hat" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Warm women' hat for cold autumn by Tanya Stevenson.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV5" aria-expanded="false" aria-controls="myDIV5" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV5">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/poncho.jpg" alt="Poncho" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Knitted poncho for Indian summer by Larisa King.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV6" aria-expanded="false" aria-controls="myDIV6" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV6">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/socks.jpg" alt="Socks for babies" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Tiny socks for babies and toddlers by Kerry Woods.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV7" aria-expanded="false" aria-controls="myDIV7" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV7">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/woman-gloves.jpg" alt="Gloves and hat" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Set of hat and gloves by Dina Barbet.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV8" aria-expanded="false" aria-controls="myDIV8" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV8">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure knit">
+                        <img src="assets/gallery pictures/knitting/woman-scarf.jpg" alt="Scarf for women" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Scarf with fringe by Karen Cross.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV9" aria-expanded="false" aria-controls="myDIV9" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV9">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>          
+            </ul>    
+
+            <!-- List of images belonging to Crochet -->
+            <ul class="gallery-list">
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/baby-blanket.jpg" alt="Baby blanket" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Blanket for a newborn by Alla Sam.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV10" aria-expanded="false" aria-controls="myDIV10" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV10">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/baby-shoes.jpg" alt="Baby shoes" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            The first shoes by Mariam Linch.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV11" aria-expanded="false" aria-controls="myDIV11" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV11">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/bag.jpg" alt="Bag" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Shopping bag by Lindsey Fernando.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV12" aria-expanded="false" aria-controls="myDIV12" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV12">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/blanket.jpg" alt="Blanket" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Blanket made of fragments by Faithful Gonso.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV13" aria-expanded="false" aria-controls="myDIV13" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV13">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/oven-mitts.jpg" alt="Oven mitts" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Oven mitts by Cristofer Bell.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV14" aria-expanded="false" aria-controls="myDIV14" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV14">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/pullover.jpg" alt="Pullover" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Fishnet pullover by Nancy Cubbit.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV15" aria-expanded="false" aria-controls="myDIV15" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV15">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/rose.jpg" alt="Doily with rose" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Aquamarine doily by Sandy George.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV16" aria-expanded="false" aria-controls="myDIV16" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV16">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/star.jpg" alt="White doily" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            White star doily by Wendy Chong.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV17" aria-expanded="false" aria-controls="myDIV17" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV17">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/swimsuit.jpg" alt="Swimsuit" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Light swimsuit by Svetlana Barskikh.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV18" aria-expanded="false" aria-controls="myDIV18" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV18">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/trousers.jpg" alt="Toddler's shorts and hat" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Shorts and hat for a toddler by Violette Bearpark.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV19" aria-expanded="false" aria-controls="myDIV19" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV19">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure crochet">
+                        <img src="assets/gallery pictures/crochet/violet.jpg" alt="Knittet violet flowers" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Bouquet of violets by Caroline Bower.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV20" aria-expanded="false" aria-controls="myDIV20" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV20">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+            </ul>
+            <!-- List of images belonging to Toys & Dolls -->
+            <ul class="gallery-list">
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/android.jpg" alt="Android" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Android toy by Sam Cargan.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV21" aria-expanded="false" aria-controls="myDIV21" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV21">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/bear.jpg" alt="Bear" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                        Tiny bear by Francis Corb. 
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV22" aria-expanded="false" aria-controls="myDIV22" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV22">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/cow.jpg" alt="Cow" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Lovely cow by Dina Werden.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV23" aria-expanded="false" aria-controls="myDIV23" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV23">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/bear-vinny.jpg" alt="Vinny the Pooh" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Vinny the Pooh by Gerda Larsen.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV24" aria-expanded="false" aria-controls="myDIV24" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV24">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/doll-granddad.jpg" alt="Old man doll" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Grandpa doll by Ursula Liebe.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV25" aria-expanded="false" aria-controls="myDIV25" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV25">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/dog-pullover.jpg" alt="Dog's sweatshirt" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Christmas sweatshirt for a dog by Glenn Hill. 
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV26" aria-expanded="false" aria-controls="myDIV26" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV26">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/dolls.jpg" alt="Dolls' clothes" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Clothes for baby dolls by Tina McLaren.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV27" aria-expanded="false" aria-controls="myDIV27" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV27">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/donuts.jpg" alt="Doughnuts" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Doughnuts toys by Rose Kirchwood.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV28" aria-expanded="false" aria-controls="myDIV28" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV28">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/dragons.jpg" alt="Dragons" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Cute pair of dragons by Barbara Donald.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV29" aria-expanded="false" aria-controls="myDIV29" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV29">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/goose.jpg" alt="Goose" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Toy goose by Tracy Parker.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV30" aria-expanded="false" aria-controls="myDIV30" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV30">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/leaves.jpg" alt="Tree leaves" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Decorative leaves by Carmen Hitch.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV31" aria-expanded="false" aria-controls="myDIV31" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV31">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/oranges.jpg" alt="Oranges" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Bright oranges by Helena Bart.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV32" aria-expanded="false" aria-controls="myDIV32" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV32">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="gallery-list-figure toys">
+                        <img src="assets/gallery pictures/toys/snowman.jpg" alt="Snowman" class="shadow p-3 mb-2 bg-body rounded">
+                        <figcaption class="accessibility-plugin-ac">
+                            Snowman for a Christmas tree by Inga Linch.
+                        </figcaption>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#myDIV33" aria-expanded="false" aria-controls="myDIV33" class="comment-button"><img src="/assets/Comment.svg" alt="Comment icon"></button>
+                        <img src="/assets/transparent heart.png" alt="Like icon"  onclick="toggleLike(this)" class="heart-white">
+                        <div class="collapse multi-collapse" id="myDIV33">This is comment from a person <br>
+                            <input type="text" placeholder="Add comment..">
+                            <input type="submit" value="Send" class="send-button">
+                        </div>
+                    </figure>
+                </li>
+            </ul>
+        </main>
+
+        <hr class="first-hr">
+        <!-- Footer consisting of site map, contact information, social media. -->
+        <footer class="first-footer">
+            <!-- Site map/duplicate of navbar -->
+            <nav>
+                <ul class="bottom-navbar-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="fair.html">Fair</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                </ul>
+            </nav>
+            <!-- First column with Socia media -->
+            <section сlass="social-media">
+                <h4>
+                    Social media
+                </h4>
+                <img src="assets/icons/Pintrest WC.svg" alt="Pintrest">
+                <img src="assets/icons/Facebook WC.svg" alt="Facebook">
+                <img src="assets/icons/Instagram WC.svg" alt="Instagram">
+                <img src="assets/icons/YouTube WC.svg" alt="Youtube">
+            </section>
+            <!-- Second column with related documents and links -->
+            <ul class="footer-second-column">
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="report.html">About us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+            <!-- Third column with contact information -->
+            <section class="footer-third-column">
+                <h4>Contact:</h4>
+                <p>+447812659846</p>
+                <p>jollysheep@gmail.com</p>
+    
+                <h4>Address:</h4>
+                <address>17 Paper Street,<br>
+                    London, UK<br>
+                    W8 4GB
+                </address>
+            </section>
+        </footer>
+        <!-- Second footer with author and copyright information -->
+        <hr class="second-hr">
+        <footer class="second-footer">
+            <p>Copyright © 2022 Jolly Sheep<br>
+                Project by Irina Walch
+            </p>
+        </footer>
+        <!-- Scripts -->
+        <!-- Open mobile nav menu -->
+        <script>
+            function openMenu() {
+                var x = document.getElementById("mobileLinks");
+                if (x.style.display === "grid") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "grid";
+                }
+            }
+        </script>
+        <!-- Modal for login form -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <script>
+            //This function changes colour of heart shaped icon "like".
+            function toggleLike(x){
+                x.classList.toggle("heart-pink");
+            }
+        </script>
+        <!-- This script contains the functions responsible for filtering images. -->
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("gallery-list-figure");
+              if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+            
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            
+            // Add active-button class to the current button (highlight it)
+            var btnContainer = document.getElementById("myButtonContainer");
+            var btns = btnContainer.getElementsByClassName("filter-btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active-button");
+                current[0].className = current[0].className.replace(" active-button", "");
+                this.className += " active-button";
+              });
+            }
+        </script>
+        <!-- Accessibility.js library for changing the font size -->
+        <script src="plugin/accessibility.js"></script>
+        <!-- Bootstrap and popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>

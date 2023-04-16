@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- There is all the invisible to user information in head section.  -->
+    <head>
+        <title>Jolly Sheep - Fair</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This is a website for a community of people interested in DIY for seeking tutorials, patterns, ideas, discussion and sharing.">
+        <meta name="author" content="DIY Community">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="refresh" content="600">
+        <meta name="keywords" content="Knitting Crochet Sewing DIY 'Toy Making' 'DIY Club' Patterns Fair Event">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Custom style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Titan One" rel="stylesheet">
+        <link href="https://fontlibrary.org//face/el-messiri" rel="stylesheet">
+        <!-- Javascript library Animate on Scroll aos.js -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Accessibility.js library for the font size -->
+        <link rel="stylesheet" href="plugin/acessibilidade.css">
+    </head>
+
+    <!-- The structure for all visible content of the website is in body section. -->
+    <body class="my-container">
+        <!-- Header section includes search bar, account, navbar, hero image, logo and name of site. -->
+        <header>
+            <div class="fair-hero-image">
+                <div class="header-grid">
+                    <!-- Account icon -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="account-icon">
+                    </button>
+                    <!-- Modal for login form -->
+                    <div id="id01" class="modal">
+    
+                        <form class="modal-content animate" action="" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                                <button type="submit" class="login-form-submit">Login</button>
+                                <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Sets of buttons to change the font size o the page -->
+                    <div class="font-btn-set">
+                        <button id="increase-plugin-ac" class="font-change-button">A+</button>
+                        <button id="normal-plugin-ac" class="font-change-button">A</button>
+                        <button id="decrease-plugin-ac" class="font-change-button">A-</button>
+                    </div>
+                    <!-- Search bar -->
+                    <form action="" class="search-bar-form dark-search-bar-form">
+                        <input type="search" placeholder="Search.." name="search" pattern=".*\S.*" required>
+                        <button type="submit" class="search-button dark-search-button">
+                            <span>Search</span>
+                        </button>
+                    </form>
+                    <!-- Logo -->
+                    <a href="index.html" id="logo-link">
+                        <img src="assets/Logo Sheep.png" alt="Logo sheep" class="logo-image">
+                    </a>
+                    <!-- Navigation bar in the top right corner -->
+                    <nav class="top-navbar">
+                        <ul class="top-navbar-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="patterns.html">Patterns</a>
+                            </li>
+                            <li>
+                                <a href="fair.html" class="active">Fair</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="workshops.html">Workshops</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Navigation for mobile and tablet screen size -->
+                    <nav id="mobileLinks">
+                        <a href="patterns.html">Patterns</a>
+                        <a href="fair.html">Fair</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="workshops.html">Workshop</a>
+                    </nav>
+                    <a href="javascript:void(0);" class="my-menu-icon" onclick="openMenu()"></a>                
+                    <!-- Container for the title of the page -->
+                    <div class="heading-box">
+                        <h2>Fairs & Events</h2>
+                    </div>
+                    <figure id="arrow">
+                        <img src="/assets/Ellipse 2.png" alt="Scroll down icon">
+                    </figure>
+                </div>
+            </div>
+        </header>
+        
+        <main class="fair-main">
+            <!-- Section consisting of a list of events -->
+            <section class="fairs-events">
+                <!-- First event Crochet -->
+                <!-- image is taken from https://makeanddocrew.com/street-fair-crochet-hippie-purse-free-pattern/ -->
+                <figure id="first-pic" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200">
+                    <img src="assets/fair/crochet-fair.jpg" alt="crochet and yarn" class="fair-img">
+                </figure>
+                <article class="right-event-description" id="first-event">
+                    <h3 class="accessibility-plugin-ac">Crochet Fair</h3>
+                    <p class="accessibility-plugin-ac">Join us at our Crochet Fair in Notting Hill, London where those 
+                        who mastered the art of crocheting will display their most beautiful pieces.  
+                        Who will be crowned crocheting champion? 
+                    </p>
+                    <button type="button" class="red-button">Book the ticket</button>
+                </article>
+
+                <!-- Second event Knitting Festival -->
+                <!-- image is taken from https://shelehov.bezformata.com/listnews/serdtcu-ugolok-bolshoy-lug/108614547/ -->
+                <article class="left-event-description" id="second-event">
+                    <h3 class="accessibility-plugin-ac">Knitting Festival in 09/2022</h3>
+                    <p class="accessibility-plugin-ac">Fancy a knitted top for autumn? Then look no further than to this year’s 
+                        Knitting Festival  in Chelsea, London, starting at 11am on 5 September 2022, 
+                        giving you the chance to choose from tons of different knits. This event is free to attend.
+                    </p>
+                </article>
+                <figure id="second-pic" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200">
+                    <img src="assets/fair/knitting-fair.jpg" alt="knitting festival" class="fair-img">
+                </figure>
+
+                <!-- Third event Club evening -->
+                <!-- image is taken from https://blog.vsemayki.ru/podborki/uvlechenia-i-hobby-dlya-zhenshin/? -->
+                <figure id="third-pic" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200">
+                    <img src="assets/fair/knit-meet.jpg" alt="toy makers' meeting" class="fair-img">
+                </figure>
+                <article class="right-event-description" id="third-event">
+                    <h3 class="accessibility-plugin-ac">Toys builders' Club meeting</h3>
+                    <p class="accessibility-plugin-ac">Make new connections over a nice cuppa and delicious treats at the fortnightly 
+                        Toys builder’s Club, where you can work on your toys. All levels welcome.
+                    </p>
+                    <button type="button" class="red-button">Join the Club</button>
+                </article>
+            </section>
+            <section class="contact-form" data-aos="zoom-in" data-aos-once="true" data-aos-duration="800" data-aos-delay="200" data-aos-ease="ease-in-out">
+                <h3 class="accessibility-plugin-ac">Contact us to participate in the next event</h3>
+                <form>
+                    <label for="fname" class="accessibility-plugin-ac">First Name</label>
+                    <input type="text" id="fname" placeholder="Your name.." class="contact-input">
+                    <label for="phone" class="accessibility-plugin-ac">Phone number</label>
+                    <input type="tel" id="phone" placeholder="Your phone number.." pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" class="contact-input">
+                    <label for="eaddress" class="accessibility-plugin-ac">Email address</label>
+                    <input type="email" id="eaddress" placeholder="Your email.." class="contact-input">
+                    <input type="submit" value="Submit" class="button-submit">
+                </form>
+            </section>
+        </main>
+
+        <hr class="first-hr">
+        <!-- Footer consisting of site map, contact information, social media. -->
+        <footer class="first-footer">
+            <!-- Site map/duplicate of navbar -->
+            <nav>
+                <ul class="bottom-navbar-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="fair.html">Fair</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                </ul>
+            </nav>
+            <!-- First column with Socia media -->
+            <section сlass="social-media">
+                <h4>
+                    Social media
+                </h4>
+                <img src="assets/icons/Pintrest WC.svg" alt="Pintrest">
+                <img src="assets/icons/Facebook WC.svg" alt="Facebook">
+                <img src="assets/icons/Instagram WC.svg" alt="Instagram">
+                <img src="assets/icons/YouTube WC.svg" alt="Youtube">
+            </section>
+            <!-- Second column with related documents and links -->
+            <ul class="footer-second-column">
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="report.html">About us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+            <!-- Third column with contact information -->
+            <section class="footer-third-column">
+                <h4>Contact:</h4>
+                <p>+447812659846</p>
+                <p>jollysheep@gmail.com</p>
+    
+                <h4>Address:</h4>
+                <address>17 Paper Street,<br>
+                    London, UK<br>
+                    W8 4GB
+                </address>
+            </section>
+        </footer>
+        <!-- Second footer with author and copyright information -->
+        <hr class="second-hr">
+        <footer class="second-footer">
+            <p>Copyright © 2022 Jolly Sheep<br>
+                Project by Irina Walch
+            </p>
+        </footer>
+        <!-- aos.js library for animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- Accessibility.js library for changing the font size -->
+        <script src="plugin/accessibility.js"></script>
+        <!-- Open mobile nav menu -->
+        <script>
+            function openMenu() {
+                var x = document.getElementById("mobileLinks");
+                if (x.style.display === "grid") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "grid";
+                }
+            }
+        </script>
+        <!-- Modal for login form -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <!-- Bootstrap and popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- There is all the invisible to user information in head section.  -->
+    <head>
+        <title>Jolly Sheep - Workshops</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This is a website for a community of people interested in DIY for seeking tutorials, patterns, ideas, discussion and sharing.">
+        <meta name="author" content="DIY Community">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="refresh" content="600">
+        <meta name="keywords" content="Knitting Crochet Sewing DIY 'Toy Making' 'DIY Club' Patterns Fair Event Tutorial">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Custom style sheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Titan One" rel="stylesheet">
+        <link href="https://fontlibrary.org//face/el-messiri" rel="stylesheet">
+        <!-- Accessibility.js library for the font size -->
+        <link rel="stylesheet" href="plugin/acessibilidade.css">
+    </head>
+
+    <!-- The structure for all visible content of the website is in body section. -->
+    <body class="my-container">
+        <!-- Header section includes search bar, account, navbar, hero image, logo and name of site. -->
+        <header>
+            <div class="workshops-hero-image">
+                <div class="header-grid">
+                    <!-- Account icon -->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="account-icon">
+                    </button>
+                    <!-- Modal for login form -->
+                    <div id="id01" class="modal">
+    
+                        <form class="modal-content animate" action="" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                                <button type="submit" class="login-form-submit">Login</button>
+                                <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+                    
+                            <div class="modal-container">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Sets of buttons to change the font size o the page -->
+                    <div class="font-btn-set">
+                        <button id="increase-plugin-ac" class="font-change-button">A+</button>
+                        <button id="normal-plugin-ac" class="font-change-button">A</button>
+                        <button id="decrease-plugin-ac" class="font-change-button">A-</button>
+                    </div>
+                    <!-- Search bar -->
+                    <form action="" class="search-bar-form">
+                        <input type="search" placeholder="Search.." name="search" pattern=".*\S.*" required>
+                        <button type="submit" class="search-button">
+                            <span>Search</span>
+                        </button>
+                    </form>
+                    <!-- Logo -->
+                    <a href="index.html" id="logo-link">
+                        <img src="assets/Logo Sheep.png" alt="Logo sheep" class="logo-image">
+                    </a>
+                    <!-- Navigation bar in the top right corner -->
+                    <nav class="top-navbar">
+                        <ul class="top-navbar-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="patterns.html">Patterns</a>
+                            </li>
+                            <li>
+                                <a href="fair.html">Fair</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="workshops.html" class="active">Workshops</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Navigation for mobile and tablet screen size -->
+                    <nav id="mobileLinks">
+                        <a href="patterns.html">Patterns</a>
+                        <a href="fair.html">Fair</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="workshops.html">Workshop</a>
+                    </nav>
+                    <a href="javascript:void(0);" class="my-menu-icon" onclick="openMenu()"></a>
+                    <!-- Container for the title of the page -->
+                    <div class="heading-box">
+                        <h2>Workshops</h2>
+                    </div>
+                    <figure id="arrow">
+                        <img src="/assets/Ellipse 2.png" alt="Scroll down icon">
+                    </figure>
+                </div>
+            </div>
+        </header>
+        
+        <main class="workshops-main">
+            <!-- Side navbar -->
+            <aside class="workshops-aside">
+                <ul>
+                    <li>
+                        <button class="red-filter-btn" onclick="filterSelection('all')">Show All</button>
+                    </li>
+                    <li>
+                        <button class="red-filter-btn" onclick="filterSelection('knit')">Knitting</button>
+                    </li>
+                    <li>
+                        <button class="red-filter-btn" onclick="filterSelection('crochet')">Crochet</button>
+                    </li>
+                    <li>
+                        <button class="red-filter-btn" onclick="filterSelection('toys')">Toys & Dolls</button>
+                    </li>    
+                </ul>
+            </aside>
+            <!-- Collapsing article guidance for the beginners -->
+            <button class="collapsible knit">Knitting for the beginners. Essentials.
+                <span class="plus-sign">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-plus" viewbox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </span>
+            </button>
+
+            <article class="workshop-knitting-article collapsible-content">
+                <h3 class="accessibility-plugin-ac">Knitting is as easy as 1, 2, 3</h3>
+                <p class="accessibility-plugin-ac">Everything you need to get started with knitting you can find here.</p>
+                <p class="accessibility-plugin-ac">Knitting comes down to three essential skills: the cast on, knit stitch and the cast off.
+                    Master these three techniques and you are officially a knitter. 
+                </p>
+                <div class="workshop-figures">
+                    <figure class="workshop-figure-first">
+                        <img src="assets/cast-on.png" alt="cast on">
+                        <figcaption class="accessibility-plugin-ac">
+                            <h5>Cast on</h5>
+                            <p>Transform loose yarn into neat stitches.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="workshop-figure-second">
+                        <img src="assets/knit-stitch.png" alt="knit stitch">
+                        <figcaption class="accessibility-plugin-ac">
+                            <h5>Knit stitch</h5>
+                            <p>This simple stitch makes up a skeleton of knitting.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="workshop-figure-third">
+                        <img src="assets/cast-off.png" alt="cast off">
+                        <figcaption class="accessibility-plugin-ac">
+                            <h5>Cast off</h5>
+                            <p>Get your knitting off the needles and wear it proud!</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Section in article about yarn -->
+                <h4 class="accessibility-plugin-ac">Yarn</h4>
+                <p class="accessibility-plugin-ac">A yarn is the long, spun fibre that we knit with. 
+                    There are many types of yarns, allowing knitters to enjoy a variety of sensory experiences 
+                    as they express themselves through the medium. Yarns may be made of different fibres
+                    and have a range of textures. Their possibilities are exciting: in theory, you can knit with
+                    anything - from a skein of supple silk sock yarn to the plastic bag that you brought it home in.
+                    For the beginners it's recommended to use acrylic yarn medium weight or thicker, so that mistakes won't 
+                    feel like a big deal. And it's totally normal to make mistakes for the beginners! 
+                    Thinner yarns are harder to control.
+                </p>
+
+                <!-- Section in article about needles -->
+                <h4 class="accessibility-plugin-ac">Knitting needles</h4>
+                <p class="accessibility-plugin-ac">Experienced knitters often settle on a preferred needle type according to their knitting style and tension.
+                    Needles come in assorted types and are made of different materials, and both have benefits when using
+                    particular techniques or working with certain fibres.
+                </p>
+                <p class="accessibility-plugin-ac"><strong>Straight needles</strong> give a great deal of support to the hand when knitting. If you are new
+                to knitting, start with these. Short needles are recommended for small projects; long needles are more
+                suitable for wider knits such as a pullover or a baby's blanket, and for knitters who like to work
+                by holding the needles underneath their arms of elbows.
+                </p>
+                <p class="accessibility-plugin-ac">For the beginners it's recommended to use wood or bamboo needles as they are less slippery than steel or aluminium needles.
+                    Plastic needles are good too.
+                </p>
+                <p class="accessibility-plugin-ac">Size of needles depends on the yarn you use. When you buy a ball of yarn, the yarn label will usually include
+                    the recommended needle size listed in millimetres.
+                </p>
+
+                <!-- Section in article about other equipment -->
+                <h4 class="accessibility-plugin-ac">Other equipment</h4>
+                <p class="accessibility-plugin-ac">Hundreds of different gadgets are available to knitters. Some are merely for convenience, whereas others are absolutely
+                    vital and perform specific tasks.
+                </p>
+                <p class="accessibility-plugin-ac"><strong>The essensials: </strong>these basic items should always be to hand when you are working on a project.
+                Most knitters have a portable knitting bag or case to keep them in, so that it is easy to take everything to
+                wherever they want to sit and knit. These tools below are relatively inexpensive and can be purchased from
+                haberdashery stores and knitting suppliers.
+                </p>
+                <figure>
+                    <img src="assets/essentials.jpg" alt="essentials" id="essentials-pic">
+                    <figcaption class="accessibility-plugin-ac">
+                        <ul>
+                            <li>Knitting needle gauge</li>
+                            <li>Stitch markers and rings</li>
+                            <li>Stitch holders</li>
+                            <li>Tapestry needles</li>
+                            <li>Pins</li>
+                            <li>Needles point protectors</li>
+                            <li>Thimble</li>
+                            <li>Scissors</li>
+                            <li>Row counter</li>
+                            <li>Tape measure</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+                <!-- section in article including the first video lesson -->
+                <h4 class="accessibility-plugin-ac">Cast on</h4>
+                <p class="accessibility-plugin-ac">Casting on is a basic skill every knitter needs to know – otherwise, you won’t be able to knit. 
+                    Casting on provides the stitches that are needed to begin the project. There are many ways to cast on. 
+                    Watch the video for a full step-by-step tutorial of Thumb cast-on.</p>
+                <iframe src="https://www.youtube.com/embed/1vm6oaYzHyA" title="How to CAST ON Knitting for Total Beginners" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <!-- section in article including images of tutorial -->
+                <h4 class="accessibility-plugin-ac">Knit stitch</h4>
+                <p class="accessibility-plugin-ac">The knit stitch is the most basic and fundamental stitch and can be used alone or in combination with other stitches. 
+                    From the front, a knit stitch looks like a little v shape. Follow these four easy steps to create knit stitch.
+                </p>
+                <figure class="workshops-figures-second">
+                    <img src="assets/knit-stitch1.jpg" alt="knit stitch step 1" class="home-img-horizontal">
+                    <figcaption class="accessibility-plugin-ac">
+                        1. Hold the needle with the unworked stitches in your left hand and the other needle in your right hand.
+                        With the yarn at the back of the knitting, insert the tip of the right needle from left to right 
+                        under the front loop and through the centre of the next stitch to be worked on the left needle.
+                    </figcaption>
+                </figure>
+
+                <figure class="workshops-figures-second">
+                    <img src="assets/knit-stitch2.jpg" alt="knit stitch step 2" class="home-img-horizontal">
+                    <figcaption class="accessibility-plugin-ac">
+                        2. Wrap the yarn under and around the tip of the right needle, keeping an even tension as the yarn slips through your fingers.
+                    </figcaption>
+                </figure>
+
+                <figure class="workshops-figures-second">
+                    <img src="assets/knit-stitch3.jpg" alt="knit stitch step 3" class="home-img-horizontal">
+                    <figcaption class="accessibility-plugin-ac">
+                        3. With the tip of the right needle, carefully draw the yarn through the stitch on the left needle. Hold the yarn firmly but not too tightly.
+                    </figcaption>
+                </figure>
+
+                <figure class="workshops-figures-second">
+                    <img src="assets/knit-stitch4.jpg" alt="knit stitch step 4" class="home-img-horizontal">
+                    <figcaption class="accessibility-plugin-ac">
+                        4. Let the old loop drop off the left needle to complete the knit stitch on the right needle.
+                        Work all the stitches on the left needle onto the right needle in the same way.
+                        To start a new row, turn the work and transfer the right needle to the left hand.
+                    </figcaption>
+                </figure>
+
+                <!-- section in article including video lesson -->
+                <h4 class="accessibility-plugin-ac">Cast off</h4>
+                <p class="accessibility-plugin-ac">
+                    When your piece of knitted fabric is complete you need to close off the loops so that they can't unravel.
+                    This is called casting off the stitches. Always take yarn to the back before casting off both knit and purl stitches.
+                    If instructed to retain stitches for future use, slip your stitches onto a spare needle or a stitch holder.
+                    Watch the tutorial below how to complete your project.
+                </p>
+                <iframe src="https://www.youtube.com/embed/VSwjIUiQZlM" title="How to BIND OFF Knitting for Total Beginners" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+            <!-- Section including images tutorials -->
+            <section class="workshop-knitting-flipcards knit">
+                <!-- First Flip card. Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <figure class="flip-card-front">
+                            <img src="assets/garter-stitch.jpg" alt="garter stitch" class="work-img-horizontal">
+                        <figcaption class="accessibility-plugin-ac">Two-colour garter stitch stripe</figcaption>
+                        </figure>
+                        <div class="flip-card-back">
+                            <p class="accessibility-plugin-ac">
+                                This stripe pattern is worked in garter stitch in two colours (A and B).
+                                To work the stripe, knit 2 rows in each colour alternately, dropping the colour not
+                                in use at the side of the work and picking it up when it is needed again.
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- Second Flip card. -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <figure class="flip-card-front">
+                            <img src="assets/knit-purl-pinstripe.jpg" alt="knit and purl pinstripe" class="work-img-horizontal">
+                            <figcaption class="accessibility-plugin-ac">Two-colour knit and purl pinstripe</figcaption>
+                        </figure>
+                        <div class="flip-card-back">
+                            <p class="accessibility-plugin-ac">
+                                Knit this stripe in two colours (A and B). Work 6 rows in stocking stitch in A.
+                                Drop A at the side and knit 2 rows in B - the second of these rows creates a purl ridge on the right side.
+                                Repeat this sequence for the pinstripe effect. 
+                                To avoid loose strands of B at the edge, wrap A around B at the start of every right side row.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+            
+
+            <!-- Section including video lessons -->
+            <section class="workshop-knitting-lessons knit">
+                <iframe src="https://www.youtube.com/embed/7ePhLqw6HDM" title="How to PURL STITCH for Total Beginners" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <figcaption class="accessibility-plugin-ac">Purl stitch for the Beginners</figcaption>
+            </section>
+
+        </main>
+
+        <hr class="first-hr">
+        <!-- Footer consisting of site map, contact information, social media. -->
+        <footer class="first-footer">
+            <!-- Site map/duplicate of navbar -->
+            <nav>
+                <ul class="bottom-navbar-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="fair.html">Fair</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                </ul>
+            </nav>
+            <!-- First column with Socia media -->
+            <section сlass="social-media">
+                <h4>
+                    Social media
+                </h4>
+                <img src="assets/icons/Pintrest WC.svg" alt="Pintrest">
+                <img src="assets/icons/Facebook WC.svg" alt="Facebook">
+                <img src="assets/icons/Instagram WC.svg" alt="Instagram">
+                <img src="assets/icons/YouTube WC.svg" alt="Youtube">
+            </section>
+            <!-- Second column with related documents and links -->
+            <ul class="footer-second-column">
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="report.html">About us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+            <!-- Third column with contact information -->
+            <section class="footer-third-column">
+                <h4>Contact:</h4>
+                <p>+447812659846</p>
+                <p>jollysheep@gmail.com</p>
+    
+                <h4>Address:</h4>
+                <address>17 Paper Street,<br>
+                    London, UK<br>
+                    W8 4GB
+                </address>
+            </section>
+        </footer>
+        <!-- Second footer with author and copyright information -->
+        <hr class="second-hr">
+        <footer class="second-footer">
+            <p>Copyright © 2022 Jolly Sheep<br>
+                Project by Irina Walch
+            </p>
+        </footer>
+        <!-- Scripts -->
+        <!-- Open mobile nav menu -->
+        <script>
+            function openMenu() {
+                var x = document.getElementById("mobileLinks");
+                if (x.style.display === "grid") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "grid";
+                }
+            }
+        </script>
+        <!-- Modal for login form -->
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <!-- Function to show and collapse an article -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>   
+        <!-- Accessibility.js library for changing the font size -->
+        <script src="plugin/accessibility.js"></script>     
+        <!-- Bootstrap and popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
